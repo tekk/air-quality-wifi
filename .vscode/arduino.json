@@ -1,0 +1,6 @@
+{
+    "sketch": "AirQuality-Wifi.ino",
+    "board": "esp8266com:esp8266:d1_mini",
+    "output": "build",
+    "configuration": "CpuFrequency=80,FlashSize=4M1M,LwIPVariant=open,Debug=Serial,DebugLevel=None____,UploadSpeed=921600"
+}

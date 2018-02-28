@@ -5,21 +5,24 @@
 #include <ESP8266mDNS.h>
 #include <WiFiUdp.h>
 #include <ArduinoOTA.h>
+#include "MQ135.h"
 
-void setup() {
+void setup()
+{
   Serial.begin(115200);
-  
+
   WiFiManager wifiManager;
 
   wifiManager.setTimeout(180);
-  
-  if(!wifiManager.autoConnect("AirQualityAP")) {
+
+  if (!wifiManager.autoConnect("AirQualityAP"))
+  {
     Serial.println("Failed to connect and hit timeout.");
     delay(3000);
     //reset and try again, or maybe put it to deep sleep
     ESP.reset();
     delay(5000);
-  } 
+  }
 
   Serial.println("connected...yeey :)");
 
@@ -41,20 +44,26 @@ void setup() {
   });
   ArduinoOTA.onError([](ota_error_t error) {
     Serial.printf("Error[%u]: ", error);
-    if (error == OTA_AUTH_ERROR) Serial.println("Auth Failed");
-    else if (error == OTA_BEGIN_ERROR) Serial.println("Begin Failed");
-    else if (error == OTA_CONNECT_ERROR) Serial.println("Connect Failed");
-    else if (error == OTA_RECEIVE_ERROR) Serial.println("Receive Failed");
-    else if (error == OTA_END_ERROR) Serial.println("End Failed");
+    if (error == OTA_AUTH_ERROR)
+      Serial.println("Auth Failed");
+    else if (error == OTA_BEGIN_ERROR)
+      Serial.println("Begin Failed");
+    else if (error == OTA_CONNECT_ERROR)
+      Serial.println("Connect Failed");
+    else if (error == OTA_RECEIVE_ERROR)
+      Serial.println("Receive Failed");
+    else if (error == OTA_END_ERROR)
+      Serial.println("End Failed");
   });
-  
+
   ArduinoOTA.begin();
-  
+
   Serial.println("Ready");
   Serial.print("IP address: ");
   Serial.println(WiFi.localIP());
 }
 
-void loop() {
+void loop()
+{
   ArduinoOTA.handle();
 }
