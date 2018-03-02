@@ -1,0 +1,10 @@
+{
+  "builtInLibrariesFolders": "C:\\Program Files (x86)\\Arduino\\libraries",
+  "customBuildProperties": "build.path=d:\\Dropbox\\Moje\\AirQuality-Wifi\\build,build.warn_data_percentage=75",
+  "fqbn": "esp8266com:esp8266:d1_mini:CpuFrequency=80,FlashSize=4M1M,LwIPVariant=OpenSource,Debug=Serial,DebugLevel=None____,FlashErase=none,UploadSpeed=921600",
+  "hardwareFolders": "C:\\Program Files (x86)\\Arduino\\hardware,C:\\Users\\tekks\\AppData\\Local\\Arduino15\\packages,D:\\Dropbox\\Moje\\hardware",
+  "otherLibrariesFolders": "D:\\Dropbox\\Moje\\libraries",
+  "runtime.ide.version": "10805",
+  "sketchLocation": "d:\\Dropbox\\Moje\\AirQuality-Wifi\\AirQuality-Wifi.ino",
+  "toolsFolders": "C:\\Program Files (x86)\\Arduino\\tools-builder,C:\\Program Files (x86)\\Arduino\\hardware\\tools\\avr,C:\\Users\\tekks\\AppData\\Local\\Arduino15\\packages"
+}
